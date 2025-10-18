@@ -11,6 +11,7 @@ const palindromes = function (input) {
         reversed_array.push(filtered_array[i]);
     }
 
+    console.log(array, filtered_array, reversed_array);
     return reversed_array === filtered_array;
 
 };
