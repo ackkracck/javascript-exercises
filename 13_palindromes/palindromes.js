@@ -1,19 +1,11 @@
 const palindromes = function (input) {
-    const letters = "abcdefghijklmnopqrstuvwxyz";
+    const valid = new Set("abcdefghijklmnopqrstuvwxyz0123456789");
 
-    let array = Array.from(input.toLowerCase());
+    let filtered = Array.from(input.toLowerCase())
+        .filter(char => valid.has(char));
 
-    let filtered_array = array.filter(element => letters.includes(element));
-
-    let reversed_array = [];
-
-    for (let i = filtered_array.length - 1; i >= 0; i--) {
-        reversed_array.push(filtered_array[i]);
-    }
-
-    return reversed_array.join('') === filtered_array.join('');
+    return filtered.join('') === filtered.reverse().join('');
 };
-
 
 // Do not edit below this line
 module.exports = palindromes;
