@@ -7,17 +7,13 @@ const palindromes = function (input) {
 
     let reversed_array = [];
 
-    for (let i = filtered_array.length - 1; i = 0; i--){
+    for (let i = filtered_array.length - 1; i >= 0; i--) {
         reversed_array.push(filtered_array[i]);
     }
 
-    console.log(array);
-    console.log(filtered_array);
-    console.log(reversed_array);
-
-    return reversed_array === filtered_array;
-
+    return reversed_array.join('') === filtered_array.join('');
 };
+
 
 // Do not edit below this line
 module.exports = palindromes;
